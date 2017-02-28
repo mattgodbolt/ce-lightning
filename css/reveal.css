@@ -1337,35 +1337,19 @@ html:-moz-full-screen-ancestor {
   visibility: hidden; }
 
 /* preso styles */
-span.decomp {
-    font-family: monospace;
-    font-size: smaller;
-    color: #999999;
+.lhs {
+    left:-8.33%;
+    text-align: left;
+    float: left;
+    width:50%;
+    z-index:-10;
 }
 
-.decomp.new {
-    color: #ff2222;
+.rhs {
+    left:31.25%;
+    top: 75px;
+    float: right;
+    text-align: right;
+    z-index:-10;
+    width:50%;
 }
-
-table.comp {
-    border-bottom: 1px solid white;
-}
-
-table.comp th {
-    border: none;
-    white-space: nowrap;
-    font-family: monospace;
-    font-size: 16pt;
-}
-
-table.comp td {
-    border: 1px solid white;
-}
-
-td.comp {
-    font-size: smaller;
-}
-
-td.comp.a { background-color: #330000; }
-td.comp.b { background-color: #003300; }
-td.comp.c { background-color: #000033; }

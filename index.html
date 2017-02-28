@@ -43,20 +43,88 @@
         <section>
             <h1>Compiler Explorer</h1>
 
-            <h3>JS + Duct tape + Compiler</h3>
+            <h3>JS + Duct tape + Compilers = profit?</h3>
 
             <p>
-                <small><a href="https://github.com/mattgodbolt">@mattgodbolt</a> / <a
-                        href="https://twitter.com/mattgodbolt">@mattgodbolt</a>
+                <small>gh:<a href="https://github.com/mattgodbolt">@mattgodbolt</a> /
+                    tw:<a href="https://twitter.com/mattgodbolt">@mattgodbolt</a>
                 </small>
             </p>
         </section>
 
         <section>
-            <h2>First slide</h2>
+            <h2>What is it?</h2>
+            <iframe width="600px" height="160px"
+                    src="https://gcc.godbolt.org/e#compiler:g7snapshot,filters:'colouriseAsm,compileOnChange,labels,directives,commentOnly,intel',options:'-O1',source:'int+squareAndMultByFive(int+num)+%7B%0A++++return+num+*+num+*+5%3B%0A%7D'"></iframe>
+        </section>
+
+        <section>
+            <h2>How it works</h2>
             <ul>
-                <li>Some point</li>
-                <li>Another point</li>
+                <li>JS editor widget</li>
+                <li>node.js server API endpoint</li>
+                <li>Display output</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>OSS</h2>
+            <ul class="left">
+                <li>golden-layout</li>
+                <li>monaco</li>
+                <li>CodeMirror</li>
+                <li>node.js / express</li>
+                <li>underscore</li>
+                <li>jquery</li>
+                <li>bootstrap</li>
+                <li>lru-cache</li>
+                <li>...</li>
+            </ul>
+            <ul class="right">
+                <li>gcc</li>
+                <li>clang</li>
+                <li>go</li>
+                <li>gdc</li>
+                <li>ldc</li>
+                <li>rustc</li>
+                <li>objdump</li>
+                <li>nginx</li>
+                <li>...</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Duct tape</h2>
+            <ul>
+                <li>Server: 2,300 LoC</li>
+                <li>Client: 3,700 LoC</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Deployment</h2>
+            <h4>EC2 on AWS</h4>
+            <img class="fragment" src="docker_all_the_things.jpg" width="552" height="414">
+        </section>
+
+        <section>
+            <h2>But</h2>
+            <ul>
+                <li>40GB of compiler binaries</li>
+                <li>Hours to build and upload images</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Solution</h2>
+            <img src="docker_some_of_the_things.jpg" width="552" height="414">
+        </section>
+
+        <section>
+            <h2>Solution</h2>
+            <ul>
+                <li>Compiler binaries on NFS mount</li>
+                <li>Scripts to update and deploy locally</li>
             </ul>
         </section>
 
@@ -64,10 +132,9 @@
             <h2>Questions?</h2>
 
             <p>
-                <a href="https://d.godbolt.org/">d.godbolt.org</a><br>
-                <a href="https://gcc.godbolt.org/">gcc.godbolt.org</a><br>
-                <a href="https://go.godbolt.org/">go.godbolt.org</a><br>
-                <a href="https://rust.godbolt.org/">rust.godbolt.org</a><br>
+                https://{<a href="https://d.godbolt.org/">d</a>,<a href="https://gcc.godbolt.org/">gcc</a>,<a
+                    href="https://go.godbolt.org/">go</a>,<a href="https://rust.godbolt.org/">rust</a>}.godbolt.org</a>
+                <br>
                 <a href="https://github.com/mattgodbolt/compiler-explorer">github.com/mattgodbolt/compiler-explorer</a><br>
                 <a href="https://twitter.com/mattgodbolt">@mattgodbolt</a>
             </p>
